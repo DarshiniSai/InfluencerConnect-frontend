@@ -146,9 +146,12 @@ form.addEventListener("submit", async (e) => {
     if (!emailVal) return showToast("Email is required", "error");
     if (!passwordVal) return showToast("Password is required", "error");
 
-    const response = await fetch(
-      `${BACKEND_URL}/users?email=${emailVal}&password=${passwordVal}`
-    );
+    const response = await fetch(`${BACKEND_URL}/users/login`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: emailVal, password: passwordVal }),
+    });
+
     const data = await response.json();
     if (data && data.email) {
       showToast("Login sucessful", "success");
