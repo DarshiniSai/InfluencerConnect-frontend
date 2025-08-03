@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login / Signup</title>
+    <link href="./css/login.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h2 id="formTitle">Login</h2>
+      <form id="form">
+        <input type="text" id="name" placeholder="Name" style="display: none" />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <select id="role">
+          <option value="influencer">Influencer</option>
+          <option value="brand">Brand</option>
+        </select>
+
+        <div id="influencerFields" style="display: none">
+          <label><strong>Social Media Platforms</strong></label>
+          <div class="platform-group">
+            <label><input type="checkbox" id="instaCheck" /> Instagram</label
+            ><br />
+            <input
+              type="text"
+              placeholder="Instagram ID"
+              id="instaId"
+              style="display: none"
+            />
+            <input
+              type="number"
+              placeholder="Followers"
+              id="instaFollowers"
+              style="display: none"
+            />
+          </div>
+          <div class="platform-group">
+            <label><input type="checkbox" id="ytCheck" /> YouTube</label><br />
+            <input
+              type="text"
+              placeholder="YouTube Channel ID"
+              id="ytId"
+              style="display: none"
+            />
+            <input
+              type="number"
+              placeholder="Subscribers"
+              id="ytFollowers"
+              style="display: none"
+            />
+          </div>
+          <div class="platform-group">
+            <label><input type="checkbox" id="twCheck" /> Twitter</label><br />
+            <input
+              type="text"
+              placeholder="Twitter Handle"
+              id="twId"
+              style="display: none"
+            />
+            <input
+              type="number"
+              placeholder="Followers"
+              id="twFollowers"
+              style="display: none"
+            />
+          </div>
+        </div>
+        <div id="segmentFields" style="display: none">
+          <input
+            type="text"
+            id="segment"
+            placeholder="Segment (e.g. Fashion, Tech, Fitness)"
+          />
+          <textarea
+            id="audience"
+            placeholder="Describe your audience (e.g. youth aged 18–25 in metro cities)"
+          ></textarea>
+        </div>
+        <div id="brandFields" style="display: none">
+          <input type="text" id="brandName" placeholder="Brand Name" />
+          <input type="url" id="website" placeholder="Website" />
+        </div>
+
+        <button type="submit">Submit</button>
+
+        <p
+          id="toggleForm"
+          style="
+            text-align: center;
+            margin-top: 10px;
+            cursor: pointer;
+            color: blue;
+          "
+        >
+          Don't have an account? Sign up
+        </p>
+
+        <p id="forgot-password" style="text-align: center; margin-top: 10px">
+          <a href="forgotPassword.html">Forgot Password?</a>
+        </p>
+      </form>
+    </div>
+    <div id="toast-container"></div>
+    <script src="./js/config.js"></script>
+    <script src="./js/login.js"></script>
+  </body>
+</html>

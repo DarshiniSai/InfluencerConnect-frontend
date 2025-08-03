@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+  <link href="./css/influencer-profile.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Influencer Connect</h1>
+    <nav>
+      <a href="influencer-invites.html" class="nav-link">Campaign Invites</a>
+      <button class="logout" onclick="logout()">Logout</button>
+    </nav>
+  </header>
+  <div>
+    <div class="profile-container">
+      <div class="profile" id="profile">
+        <div class="loading">Loading profile...</div>
+      </div>
+    </div>
+  </div>
+  <div id="toast-container"></div>
+  <script src="./js/config.js"></script>
+  <script src="./js/influencer-profile.js"></script>
+</body>
+</html>

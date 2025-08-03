@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brand DB</title>
+    <link href="./css/influencerDb.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>Influencer Connect</h1>
+      <nav>
+        <button class="logout" onclick="logout()">Logout</button>
+      </nav>
+    </header>
+    <div class="container">
+      <h1>Welcome!!</h1>
+      <p>You can choose your influencers for your brand marketing.</p>
+      <div class="btn-group">
+        <a class="btn-link" href="influencer.html">Inflencer List</a>
+        <a class="btn-link" href="brand-campaigns.html">My Invites</a>
+      </div>
+    </div>
+    <div id="confirm-dialog" class="confirm-overlay" style="display: none">
+      <div class="confirm-box">
+        <p id="confirm-message">Are you sure?</p>
+        <div class="confirm-buttons">
+          <button id="confirm-yes">Yes</button>
+          <button id="confirm-no">No</button>
+        </div>
+      </div>
+    </div>
+    <div id="toast-container"></div>
+    <script src="./js/config.js"></script>
+    <script src="./js/brandDb.js"></script>
+  </body>
+</html>

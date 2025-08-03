@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Influencer Directory</title>
+  <link href="./css/influencer.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Influencer Connect</h1>
+    <nav>
+      <a href="brand-campaigns.html" class="nav-link">My Campaigns</a>
+      <button class="logout" onclick="logout()">Logout</button>
+    </nav>
+  </header>
+  <div class="div1">
+    <section class="directory-container">
+      <h2>Find Influencers</h2>
+      <div class="filters">
+        <label for="segmentFilter">Segment:</label>
+        <select id="segmentFilter">
+          <option value="">All</option>
+          <option value="Fashion">Fashion</option>
+          <option value="Fitness">Fitness</option>
+          <option value="Tech">Tech</option>
+          <option value="Travel">Travel</option>
+          <option value="Food">Food</option>
+          <option value="Beauty">Beauty</option>
+          <option value="Parenting">Parenting</option>
+          <option value="Gaming">Gaming</option>
+          <option value="Motivation">Motivation</option>
+          <option value="DIY/Crafts">DIY/Crafts</option>
+        </select>
+      </div>
+      <div id="influencerList" class="influencer-list">
+        <div class="loading">Loading influencers...</div>
+      </div>
+    </section>
+  </div>
+  <div id="toast-container"></div>
+  <script src="./js/config.js"></script>
+  <script src="./js/influencer.js"></script>
+</body>
+</html>

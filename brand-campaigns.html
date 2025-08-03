@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Campaigns</title>
+    <link href="./css/brand-campaigns.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>Influencer Connect</h1>
+      <nav>
+        <a href="influencer.html" class="nav-link">Find Influencers</a>
+        <button class="logout" onclick="logout()">Logout</button>
+      </nav>
+    </header>
+    <div class="div1">
+      <section class="campaigns-container">
+        <h2>My Campaigns</h2>
+        <h3>Sent Invites</h3>
+        <div id="inviteList" class="invite-list"></div>
+      </section>
+    </div>
+    <div id="toast-container"></div>
+    <div id="confirm-dialog" class="confirm-overlay" style="display: none">
+      <div class="confirm-box">
+        <p id="confirm-message">Are you sure?</p>
+        <div class="confirm-buttons">
+          <button id="confirm-yes">Yes</button>
+          <button id="confirm-no">No</button>
+        </div>
+      </div>
+    </div>
+    <script src="./js/config.js"></script>
+    <script src="./js/brand-campaigns.js"></script>
+  </body>
+</html>

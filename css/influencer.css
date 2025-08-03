@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav .nav-link {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav .nav-link:hover {
+  color: #2980b9;
+}
+
+nav .logout {
+  background: #e74c3c;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+nav .logout:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+}
+
+.div1 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 5%;
+}
+
+.directory-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 1200px;
+}
+
+.directory-container h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.filters {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filters label {
+  font-size: 1rem;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.filters select {
+  padding: 0.6rem;
+  border: 1px solid #dfe6e9;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #34495e;
+  background: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+.filters select:focus {
+  outline: none;
+  border-color: #e74c3c;
+  background: #fff;
+}
+
+.influencer-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.loading {
+  font-size: 1.2rem;
+  color: #3498db;
+  text-align: center;
+  animation: pulse 1.5s infinite;
+}
+
+.error {
+  font-size: 1rem;
+  color: #e74c3c;
+  text-align: center;
+}
+
+.card {
+  background: #f3f2f2;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #644d6a;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+  border: 2px solid #ccc;
+  background-color: #fff;
+}
+
+.card-info h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.card-info p {
+  margin: 0.3rem 0 0;
+  color: #6d6b6b;
+  font-size: 0.95rem;
+}
+
+.card h2 {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 0.8rem;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #34495e;
+  margin-bottom: 0.5rem;
+}
+
+.card p strong {
+  color: #2c3e50;
+}
+
+.platforms {
+  font-size: 0.9rem;
+  color: #34495e;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.invite-message {
+  padding: 7px;
+  border-radius: 10px;
+  color: #6d6b6b;
+}
+
+.invite-btn {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(to right top, #d864d8, #af62d5, #8360ce, #545cc2, #0056b3);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.invite-btn:hover {
+  background: #91058e;
+  transform: translateY(-2px);
+}
+
+#toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.toast {
+  background-color: #333;
+  color: #fff;
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  animation: slideIn 0.5s ease, fadeOut 0.5s ease 2.5s forwards;
+  font-size: 0.95rem;
+}
+
+.toast.success { background-color: #2ecc71; }
+.toast.error { background-color: #e74c3c; }
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(100%); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; transform: translateX(100%); }
+}
